@@ -1,17 +1,13 @@
-
 # -- --------------------------------------------------------------------------------------------------- -- #
 # -- MarketMaker-BackTest                                                                                -- #
 # -- --------------------------------------------------------------------------------------------------- -- #
-# -- file: visualizations.py                                                                             -- #
+# -- file: visualizations_labv.py                                                                  -- #
 # -- Description: Functions for plots, tables and text visualizations for the project                    -- #
 # -- --------------------------------------------------------------------------------------------------- -- #
-# -- Author: IFFranciscoME - if.francisco.me@gmail.com                                                   -- #
+# -- Author: Lizbeth Alejandra Barragán Vázquez                                                   -- #
 # -- license: MIT License                                                                                -- #
-# -- Repository: https://github.com/IFFranciscoME/MarketMaker-BackTest                                   -- #
+# -- Repository: https://github.com/labv98/Lab4_LABV.git                                   -- #
 # --------------------------------------------------------------------------------------------------------- #
 
-# -- Load base packages
-import pandas as pd
-import numpy as np
 import plotly.graph_objects as go
-from rich import inspect
+

@@ -1,3 +1,15 @@
+# -- --------------------------------------------------------------------------------------------------- -- #
+# -- Función para leer datos y trabajar en ellos                                                        -- #
+# -- --------------------------------------------------------------------------------------------------- -- #
+# -- file: functions_labv.py                                                                              -- #
+# -- Description: Function execution logic for the project                                          -- #
+# -- --------------------------------------------------------------------------------------------------- -- #
+# -- Author: Lizbeth Aljandra Barragán Vázquez                                                   -- #
+# -- license: MIT License                                                                                -- #
+# -- Repository: https://github.com/labv98/Lab4_LABV.git                                 -- #
+# --------------------------------------------------------------------------------------------------------- #
+
+
 import pandas as pd
 from data import order_book
 
