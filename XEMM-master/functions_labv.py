@@ -13,6 +13,10 @@
 import pandas as pd
 
 def currency_a(data_a, exchanges):
+    """Esta función regresa el diccionario con la información
+     extraída de ccxt para el PRIMER símbolo.
+     De este modo, podremos ver y analizar los cambios
+     que presentan las serie de tiempo correspondientes."""
 
     # Ciclo de diccionario
     dictionary_a = {'Exchange': [],
@@ -54,10 +58,13 @@ def currency_a(data_a, exchanges):
             vwap = (vwap_ask + vwap_bid) / 2
             dictionary_a['VWAP'].append(vwap)
 
-    #df = pd.DataFrame(dictionary)
     return dictionary_a
 
 def currency_b(data_b, exchanges):
+    """Esta función regresa el diccionario con la información
+     extraída de ccxt para el SEGUNDO símbolo.
+     De este modo, podremos ver y analizar los cambios
+     que presentan las serie de tiempo correspondientes."""
 
     # Ciclo de diccionario
     dictionary_b = {'Exchange': [],
@@ -102,6 +109,10 @@ def currency_b(data_b, exchanges):
     return dictionary_b
 
 def currency_c(data_c, exchanges):
+    """Esta función regresa el diccionario con la información
+     extraída de ccxt para el TERCER símbolo.
+     De este modo, podremos ver y analizar los cambios
+     que presentan las serie de tiempo correspondientes."""
 
     # Ciclo de diccionario
     dictionary_c = {'Exchange': [],
