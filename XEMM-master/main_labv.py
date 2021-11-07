@@ -11,7 +11,6 @@
 
 # Librerías
 import pandas as pd
-import plotly.graph_objects as go
 from data import order_book
 from functions_labv import *
 
@@ -24,5 +23,24 @@ expected_volume = 0
 data = order_book(symbol=symbol, exchanges=exchanges, output='inplace', stop=None, verbose=True)
 
 # Data
-print(currency(data, exchanges))
+df = currency(data, exchanges)
+print(df)
 
+
+#Figures
+
+fig = go.Figure()
+
+time = df[df["Fechas"].to_list()]
+
+# ftx
+ftx = df[df['Exchanges']=='ftx']
+
+
+
+
+values = currency(data, exchanges)["Levels"].to_list()
+
+# Create and style traces
+fig.add_trace(go.Scatter(x=time, y=values, name='Levels',
+                         line=dict(color='firebrick', width=4)))

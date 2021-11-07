@@ -10,4 +10,7 @@
 # --------------------------------------------------------------------------------------------------------- #
 
 import plotly.graph_objects as go
+from functions_labv import *
+import plotly.express as px
 
+#
