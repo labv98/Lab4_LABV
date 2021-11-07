@@ -12,7 +12,7 @@
 
 # -- Load Packages for this script
 import pandas as pd
-import pandas as np
+import numpy as np
 
 # -- Load other scripts
 from data import fees_schedule, order_book
@@ -27,41 +27,6 @@ expected_volume = 0
 
 # Massive download of OrderBook data
 data = order_book(symbol=symbol, exchanges=exchanges, output='inplace', stop=None, verbose=True)
-
-levels = []
-volume_bids = []
-volume_asks = []
-volumes = []
-midprices = []
-vwap_asks = []
-vwap_bids = []
-vwaps = []
-fechas = []
-
-for exchange in exchanges:
-    for i in order_book['kraken'].keys():
-        fecha = i
-        keys = pd.DataFrame(order_book['kraken'][i])
-        level = len(keys)
-        volume_bid = keys['bid_size'].sum()
-        volume_ask = keys['ask_size'].sum()
-        #volume = volume_bid + volume_ask
-        #midprice = (keys['ask'][0]+keys['bid'][0]) / 2
-        #vwap_ask = (keys['ask'] * keys['ask_size']).sum() / keys['ask_size'].sum()
-        #vwap_bid = (keys['bid'] * keys['bid_size']).sum() / keys['bid_size'].sum()
-        #vwap = (vwap_ask + vwap_bid) / 2
-
-        fechas.append(fecha)
-        levels.append(level)
-        volume_bids.append(volume_bid)
-        volume_asks.append(volume_ask)
-volume_asks
-
-for exchange in exchanges:
-    for i in range(len(list(data[exchange.keys()]))):
-        tmp = list(data[exchange].keys())[i]
-        print('Timestamp', exchange, ':', tmp)
-
 
 # Test
 # data['kraken'][list(data['kraken'].keys())[2]]
