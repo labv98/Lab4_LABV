@@ -16,7 +16,7 @@ import pickle
 from functions_labv import *
 
 # Small test
-exchanges = ["kraken", "ftx", "coinmate"]  #,"currencycom"
+exchanges = ["kraken", "ftx", "coinmate", "currencycom"]
 symbol_a = 'ETH/USD'
 symbol_b = 'DOGE/USD'
 symbol_c = 'SOL/USD'
